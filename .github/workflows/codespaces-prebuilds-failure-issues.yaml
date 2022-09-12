@@ -1,0 +1,16 @@
+name: Open issue if Codespaces Prebuild fails
+on:
+  workflow_run:
+    workflows:
+      - Codespaces Prebuilds
+    types:
+      - completed
+
+jobs:
+  workflow-failure-issues:
+    uses: urcomputeringpal/.github/.github/workflows/workflow-failure-issues.yaml@main
+    if: |
+      (
+        github.event_name == 'schedule' ||
+        github.event.workflow_run.head_branch == github.event.repository.default_branch
+      )
