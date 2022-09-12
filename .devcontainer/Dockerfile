@@ -1,8 +1,6 @@
 # Note: You can use any Debian/Ubuntu based image you want. 
 FROM mcr.microsoft.com/vscode/devcontainers/base:0-bullseye
 
-RUN exit 1
-
 # [Option] Install zsh
 ARG INSTALL_ZSH="true"
 # [Option] Upgrade OS packages to their latest versions
