@@ -1,1 +1,1 @@
-# codespaces-example
+# codespaces-examples
