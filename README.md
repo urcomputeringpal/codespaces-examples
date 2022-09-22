@@ -1,10 +1,20 @@
 # codespaces-examples
 
-## Prebuild Failure Notification Issues
+A collection of notes about GitHub Codespaces
+
+## Useful tools
+
+### Prebuild Failure Notification Issues
 
 [This action](https://github.com/urcomputeringpal/codespaces-examples/blob/main/.github/workflows/codespaces-prebuilds-failure-issues.yaml) can be copied/pasted into any repository that contains a Codespaces Prebuild to open an issue when a prebuild configuration fails and close it when it's working again.
 
 ## Known Issues
+
+### Websockets fail to connect for several minutes at startup
+
+The `Origin` header is improperly set to `localhost` for several minutes on Websocket requests, causing them to be rejected. 
+
+Reproduction and details here: https://github.com/jnewland/codespaces-websockets-bug
 
 ### Forwarded Ports are unstable after rebuild if using Docker Compose
 
