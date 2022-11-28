@@ -10,12 +10,6 @@ A collection of notes about GitHub Codespaces
 
 ## Known Issues
 
-### Websockets fail to connect for several minutes at startup
-
-The `Origin` header is improperly set to `localhost` for several minutes on Websocket requests, causing them to be rejected. 
-
-Reproduction and details here: https://github.com/jnewland/codespaces-websockets-bug
-
 ### Forwarded Ports are unstable after rebuild if using Docker Compose
 
 Sometimes they don't work at all, sometimes they drop every other request. Manually stopping and then stopping the port-forward seems to work around the problem.
